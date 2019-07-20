@@ -45,7 +45,7 @@ class ArticleEdit extends Component {
     fetch(`api/articles/${this.props.match.params.id}`, {
       method: 'PATCH',
       body: JSON.stringify(this.state),
-      headers: { 'Content-Type' : 'application/json' }})
+      headers: { 'Content-Type' : 'application/json', 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }})
         .then(response => response.json())
         .then(data => {
           this.props.history.push(`/articles/${this.state.id}`);

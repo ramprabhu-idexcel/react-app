@@ -38,7 +38,7 @@ class ArticleAdd extends Component {
     fetch('api/articles', {
       method: 'POST',
       body: JSON.stringify(this.state),
-      headers: { 'Content-Type': 'application/json' }})
+      headers: { 'Content-Type': 'application/json', 'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content') }})
         .then(response => response.json())
         .then(data => {
           this.props.history.push(`/articles/${data.id}`)
