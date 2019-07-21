@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
@@ -13,7 +14,6 @@ import ArticleInfo from './articles/ArticleInfo';
 import ArticleEdit from './articles/ArticleEdit';
 import ProductList from './products/ProductList';
 import {HashRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
-
 
 class App extends Component {
   render() {

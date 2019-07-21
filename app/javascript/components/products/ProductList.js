@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import BootstrapTable from 'react-bootstrap-table-next';
+import paginationFactory from 'react-bootstrap-table2-paginator';
 
 
 class ProductList extends Component{
@@ -44,7 +45,10 @@ class ProductList extends Component{
 	        hover
 	        keyField='id' 
 	        data={ this.state.products } 
-	        columns={ this.state.columns } />
+	        columns={ this.state.columns } 
+	        pagination={ paginationFactory() } 
+	        selectRow={ { mode: 'checkbox' } } 
+	        tabIndexCell />
 	      </div>
 	    );
   	}
