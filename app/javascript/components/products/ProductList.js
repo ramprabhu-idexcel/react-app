@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
+import cellEditFactory from 'react-bootstrap-table2-editor';
+
 
 
 class ProductList extends Component{
@@ -36,6 +38,7 @@ class ProductList extends Component{
 			.catch(error => console.log(error))
 	}
 
+	
 	render() {
 	    return (
 	      <div className="container" style={{ marginTop: 50 }}>
@@ -46,7 +49,8 @@ class ProductList extends Component{
 	        keyField='id' 
 	        data={ this.state.products } 
 	        columns={ this.state.columns } 
-	        pagination={ paginationFactory() } 
+			pagination={ paginationFactory() } 
+			cellEdit={ cellEditFactory({ mode: 'click' }) }
 	        selectRow={ { mode: 'checkbox' } } 
 	        tabIndexCell />
 	      </div>
