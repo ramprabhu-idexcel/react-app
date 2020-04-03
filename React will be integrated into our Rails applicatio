@@ -1,0 +1,73 @@
+React will be integrated into our Rails application using the Webpacker gem.
+
+We can automatically enable the Webpacker gem when you create a new application. And you can specify to integrate it specifically for React (or Angular, Vue, Elm, Stimulus)
+
+We will serialize our API with the active_model_serializer gem.
+
+We will add an api namespace to our Rails articles routes.
+
+We don't need to install the rack-cors gem since React and Rails will be running from the same origin.
+
+We will use React Router's HashRouter instead of BrowserRouter to avoid conflict with the Rails Router.
+
+We will use the ES6 native Fetch API rather than React's Axios module for AJAX requests.
+
+
+Setup the Application
+----------------------
+Let's create a new application enabled with Webpack and React. You need to have node and yarn installed on your computer.
+
+=> rails new . --webpack=react
+
+# Gemfile
+gem 'webpacker'
+
+=> bundle install
+
+
+Then run the webpacker generator to install webpacker:
+
+=> rails webpacker:install
+
+Run the webpacker generator to install React:
+
+=> rails webpacker:install:react
+
+
+Add the Active Model Serializers gem
+
+We could use the JBuilder gem to serialize objects to and from JSON strings like we did in Part 1 of this tutorial. This time though, we will use the Active Model Serializers gem discussed in Part 1. Once installed, Rails will automatically generate a serializer file for us when we generate a scaffold or resourse. Although, if we generate just the model, then we have to generate the serializer separately.
+
+gem 'active_model_serializers'
+
+=> bundle install
+
+
+Create the Articles resource
+-----------------------------
+
+rails generate model Article title:string content:text
+rails db:migrate
+rails generate serializer article title cont
+
+
+React Setup:
+-------------
+
+Now lets switch to the React portion of our code. 
+
+=> yarn add react-router-dom
+
+
+
+
+
+
+
+
+
+
+
+
+
+

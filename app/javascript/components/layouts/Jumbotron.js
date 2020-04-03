@@ -33,7 +33,7 @@ const Jumbotron = () => {
 				<div className="overlay"></div>
 				<Container>
 					<h1>Welcome</h1>
-					<p>Learn to code from my Youtube videos</p>
+					<p>This is react - rails basic app</p>
 				</Container>
 			</Jumbo>
 		</Styles>

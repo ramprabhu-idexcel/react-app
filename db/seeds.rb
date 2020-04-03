@@ -12,3 +12,31 @@ articles = Article.create([
                               {title: "Learn Rails", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."},
                               {title: "Learn React", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
                           ])
+
+
+
+Product.create([
+	{name: 'pen', price: '13'},
+	{name: 'fan', price: '23'},
+	{name: 'laptop', price: '33'},
+	{name: 'table', price: '43'},
+	{name: 'chair', price: '53'},
+	{name: 'wire', price: '63'},
+	{name: 'box', price: '73'},
+	{name: 'key', price: '83'},
+	{name: 'mobile', price: '93'},
+	{name: 'net', price: '43'},
+	{name: 'clock', price: '45'},
+	{name: 'bottle', price: '65'},
+	{name: 'window', price: '98'},
+	{name: 'charger', price: '34'},
+	{name: 'mixi', price: '55'},
+	{name: 'plate', price: '23'},
+	{name: 'bag', price: '98'},
+	{name: 'shoe', price: '23'},
+	{name: 'bulb', price: '45'},
+	{name: 'note', price: '98'},
+	{name: 'pencil', price: '23'},
+])
+
+

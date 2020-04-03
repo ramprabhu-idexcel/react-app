@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
+import 'font-awesome/css/font-awesome.min.css';
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
@@ -14,6 +15,7 @@ import ArticleAdd from './articles/ArticleAdd';
 import ArticleInfo from './articles/ArticleInfo';
 import ArticleEdit from './articles/ArticleEdit';
 import ProductList from './products/ProductList';
+import SystemList from './systems/SystemList';
 import {HashRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
 
 class App extends Component {
@@ -35,6 +37,7 @@ class App extends Component {
               <Route exact path="/articles/:id" component={ArticleInfo} />
               <Route exact path="/articles/:id/edit" component={ArticleEdit} />
               <Route exact path="/products" component={ProductList} />
+              <Route exact path="/systems" component={SystemList} />
               <Route component={NoMatch} />
             </Switch>
            </Router>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import $ from 'jquery';
 
 class ArticleAdd extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class ArticleAdd extends Component {
   render() {
     return (
         <div>
-          <h1>Create Article Post</h1>
+          <h1>Create Article</h1>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label>Title</label><br/>
@@ -25,7 +26,7 @@ class ArticleAdd extends Component {
             </div>
             <br/>
             <div className="btn-group">
-              <button type="submit" className="btn btn-dark">Create</button>
+              <button type="submit" className="btn btn-dark">Submit</button> |
               <button type="button" onClick={this.handleCancel} className="btn btn-secondary">Cancel</button>
             </div>
           </form>
@@ -35,6 +36,7 @@ class ArticleAdd extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
+
     fetch('api/articles', {
       method: 'POST',
       body: JSON.stringify(this.state),

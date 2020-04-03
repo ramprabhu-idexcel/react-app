@@ -36,6 +36,7 @@ const NavigationBar = () => {
 						<Nav.Item> <NavLink to="/contact" className='nav-link'> Contact </NavLink> </Nav.Item>
 						<Nav.Item> <NavLink to="/articles" className='nav-link'> Articles </NavLink> </Nav.Item>
 						<Nav.Item> <NavLink to="/products" className='nav-link'> Products </NavLink> </Nav.Item>
+						<Nav.Item> <NavLink to="/systems" className='nav-link'> Systems </NavLink> </Nav.Item>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
