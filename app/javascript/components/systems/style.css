@@ -134,3 +134,7 @@
   #card-header-color {
     background-color: lightgrey;
   }
+
+  #system-search-input {
+    float: right;
+  }

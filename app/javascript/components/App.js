@@ -17,6 +17,7 @@ import ArticleEdit from './articles/ArticleEdit';
 import ProductList from './products/ProductList';
 import SystemList from './systems/SystemList';
 import {HashRouter as Router, Route, NavLink, Switch} from 'react-router-dom';
+import ReactNotifications from 'react-notifications-component';
 
 class App extends Component {
   render() {
@@ -25,6 +26,7 @@ class App extends Component {
           <Router>
             <NavigationBar></NavigationBar>
           </Router>
+          <ReactNotifications />
           <Jumbotron />
           <Layout>
            <Router>

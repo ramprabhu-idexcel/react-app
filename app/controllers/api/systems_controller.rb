@@ -33,6 +33,11 @@ class Api::SystemsController < ApplicationController
     head :no_content
   end
 
+  def search
+    @systems = System.search(params[:search])
+    render json: @systems
+  end
+
   private
   def system_params
     params.require(:system).permit(:name, :group, :city, :state, :country, :installer, :owner, :pcus, :acbs, :encharges, :enpowers, :connection, :status, :stage, :partner)
